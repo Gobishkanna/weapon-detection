@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weapon Detection</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Weapon Detection Simulator</h1>
+    <p>Select an image to detect weapons:</p>
+
+    <input type="file" id="image-input" accept="image/*" onchange="handleImageUpload()">
+    
+    <div class="image-preview">
+      <img id="uploaded-image" src="" alt="Uploaded Image" class="hidden">
+      <p id="no-image-msg" class="hidden">No image uploaded yet.</p>
+    </div>
+
+    <button onclick="detectWeapon()">Detect Weapon</button>
+
+    <div id="result" class="hidden">
+      <p id="result-text">Detecting...</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
